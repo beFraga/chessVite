@@ -1,0 +1,64 @@
+.App
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#board
+{
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.square
+{
+  position: relative;
+  width: calc(600px / 8);
+  height: calc(600px / 8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c1
+{
+  color: red;
+}
+
+.c0
+{
+  color: blue;
+}
+
+.s1
+{
+  background-color: #769656;
+}
+
+.s2
+{
+  background-color: #eeeed2;
+}
+
+.possible::after{
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #6662;
+  width: calc(600px / 16);
+  height: calc(600px / 16);
+}
